@@ -1,0 +1,32 @@
+.service-card {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5), 0 0 20px rgba(255,215,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #FFD700;
+}
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.7), 0 0 30px rgba(255,215,0,0.5), 0 0 50px #FFC300, 0 0 70px #FFA500;
+}
+
+.testimonial-card {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5), 0 0 20px rgba(255,215,0,0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.7), 0 0 30px rgba(255,215,0,0.5), 0 0 50px #FFC300;
+}

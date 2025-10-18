@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lasting Alliance</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main id="main-content">
+    <!-- Sections will be loaded here -->
+</main>
+
+<button id="backButton" onclick="goBack()">← Back</button>
+
+<div id="lightbox-placeholder"></div>
+<div id="ai-chat-placeholder"></div>
+<div id="footer-placeholder"></div>
+
+<audio id="popSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+
+<script src="js/navigation.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/testimonials.js"></script>
+<script src="js/likes.js"></script>
+<script src="js/ai_chat.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load components
+        fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header-placeholder').innerHTML = data);
+        fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
+        fetch('components/lightbox.html').then(res => res.text()).then(data => document.getElementById('lightbox-placeholder').innerHTML = data);
+        fetch('components/ai_chat.html').then(res => res.text()).then(data => document.getElementById('ai-chat-placeholder').innerHTML = data);
+
+        // Load sections
+        const mainContent = document.getElementById('main-content');
+        const sections = ['services', 'courses', 'about', 'testimonials', 'contact', 'ai_models'];
+        sections.forEach(section => {
+            fetch(`sections/${section}.html`)
+                .then(res => res.text())
+                .then(data => {
+                    mainContent.innerHTML += data;
+                    if (section === 'services') {
+                        showSection('servicesSection');
+                    }
+                });
+        });
+    });
+</script>
+
+</body>
+</html>

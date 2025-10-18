@@ -1,0 +1,127 @@
+@media (min-width: 768px) {
+    .grid {
+        justify-content: space-around;
+    }
+    header {
+        justify-content: center;
+        gap: 30px;
+    }
+    .service-card {
+        width: 250px;
+        display: inline-block;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    header button {
+        width: 100%;
+        max-width: 200px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .ai-icon {
+        width: 180px;
+    }
+
+    .ai-icon img {
+        height: 180px;
+    }
+
+    .service-card {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    #testimonialInput {
+        width: 95% !important;
+        max-width: none !important;
+        font-size: 1em;
+    }
+
+    #testimonialName {
+        width: 90% !important;
+        max-width: none !important;
+        font-size: 1em;
+    }
+
+    #lightbox img {
+        max-width: 95%;
+        max-height: 60%;
+    }
+
+    #aiChat {
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #aiChat.expanded {
+        width: 90vw;
+        height: 70vh;
+        max-width: 400px;
+        max-height: 500px;
+        border-radius: 20px;
+    }
+
+    #chatBox {
+        height: 150px;
+    }
+
+    #chatContent {
+        max-height: 250px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-info p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .ai-icon {
+        width: 150px;
+    }
+
+    .ai-icon img {
+        height: 150px;
+    }
+
+    #aiChat.expanded {
+        width: 95vw;
+        height: 75vh;
+    }
+
+    #lightbox img {
+        max-width: 98%;
+        max-height: 50%;
+    }
+}

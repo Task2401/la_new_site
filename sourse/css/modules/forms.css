@@ -1,0 +1,48 @@
+#testimonialInput {
+    width: 80%;
+    max-width: 600px;
+    height: 100px;
+    background-color: #111;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Segoe UI', sans-serif;
+    resize: none;
+    box-shadow: 0 0 10px rgba(255,215,0,0.2);
+}
+
+#testimonialName {
+    width: 40%;
+    max-width: 300px;
+    margin-top: 10px;
+    background-color: #111;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 8px;
+    font-size: 1em;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 0 10px rgba(255,215,0,0.2);
+}
+
+#selectQuestion {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #FFD700;
+    margin-bottom: 5px;
+    background-color: #111;
+    color: #FFD700;
+    box-shadow: 0 0 10px rgba(255,215,0,0.2);
+}
+
+#liveTestimonials {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#testimonialList {
+    margin-top: 30px;
+}
