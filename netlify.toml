@@ -1,0 +1,12 @@
+[build]
+  publish = "sourse"
+  command = ""
+
+[dev]
+  # Netlify Dev settings - optional
+  port = 8888
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
