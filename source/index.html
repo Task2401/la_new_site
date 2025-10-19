@@ -26,14 +26,19 @@
 <script src="js/lightbox.js"></script>
 <script src="js/testimonials.js"></script>
 <script src="js/likes.js"></script>
-<script src="js/ai_chat.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Load components
         fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header-placeholder').innerHTML = data);
         fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
         fetch('components/lightbox.html').then(res => res.text()).then(data => document.getElementById('lightbox-placeholder').innerHTML = data);
-        fetch('components/ai_chat.html').then(res => res.text()).then(data => document.getElementById('ai-chat-placeholder').innerHTML = data);
+        fetch('components/ai_chat.html').then(res => res.text()).then(data => {
+            document.getElementById('ai-chat-placeholder').innerHTML = data;
+            // Load ai_chat.js after the component is loaded
+            const script = document.createElement('script');
+            script.src = 'js/ai_chat.js';
+            document.head.appendChild(script);
+        });
 
         // Load sections
         const mainContent = document.getElementById('main-content');
