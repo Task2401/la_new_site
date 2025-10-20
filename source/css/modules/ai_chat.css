@@ -33,7 +33,7 @@
     display: none;
     padding: 10px;
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 400px;
 }
 
 #aiChat.expanded #chatContent {
